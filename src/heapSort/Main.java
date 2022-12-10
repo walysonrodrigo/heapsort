@@ -15,4 +15,26 @@ public class Main {
 		
 	}
 
+	private static void heap(int[] vetor, int n, int i){
+		int raiz = i;
+		int esquerda = 2*i + 1;
+		int direita = 2*i + 2;
+		
+		if(esquerda < n && vetor[esquerda] > vetor[raiz]){
+			raiz = esquerda;
+		}
+		
+		if(direita < n && vetor[direita] > vetor[raiz]){
+			raiz = direita;
+		}
+		
+		if(raiz != i){
+			int aux = vetor[i];
+			vetor[i] = vetor[raiz];
+			vetor[raiz] = aux;
+			
+			heap(vetor, n, raiz);
+		}
+	}
+
 }
