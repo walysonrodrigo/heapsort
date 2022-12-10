@@ -12,6 +12,18 @@ public class Main {
 		for(int i = 0; i < vetor.length; i++){
 			System.out.print(vetor[i] + " ");
 		}
+
+		int n = vetor.length;
+		
+		for(int i = n /2 - 1; i >= 0; i--) {
+			heap(vetor, n, i);
+		}
+		
+		System.out.println("\n\nFormato de arvore bin");
+		for(int i = 0; i < vetor.length; i++){
+			System.out.print(vetor[i] + " ");
+		}
+		
 		
 	}
 
