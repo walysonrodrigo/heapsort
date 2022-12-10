@@ -24,7 +24,19 @@ public class Main {
 			System.out.print(vetor[i] + " ");
 		}
 		
+		for(int j = n-1; j > 0; j--) {
+			int aux = vetor[0];
+			vetor[0] = vetor[j];
+			vetor[j] = aux;
+			
+			heap(vetor, j, 0);
+		}
 		
+		System.out.println("\n\nOrdenado");
+		for(int i = 0; i < vetor.length; i++){
+			System.out.print(vetor[i] + " ");
+		}
+
 	}
 
 	private static void heap(int[] vetor, int n, int i){
